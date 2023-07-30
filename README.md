@@ -1,3 +1,3 @@
 # Tic-Tac-Toe-JS
 
-Incredibly simply Tic-Tac-Toe game built with JS, HTML&CSS
+Incredibly simple Tic-Tac-Toe game built with JS, HTML&CSS
