@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Cabin Sketch';
+    transition: 0.3s;
+
+}
+
+:root {
+    --dark: #14213d;
+    --golden: #fca311;
+    --white: #fff;
+}
+
+body {
+    background-color: var(--dark);
+    color: white;
+}
+
+h1 {
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.board {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+    place-content: center;
+
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(4),
+.cell:nth-child(7),
+.cell:nth-child(1) {
+    border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+
+.cell.x,
+.cell.circle {
+    cursor: not-allowed;
+}
+
+.message {
+    border: 1px solid white;
+    display: none;
+    position: fixed;
+    border-radius: 12px;
+    background-color: inherit;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 650px;
+    height: 650px;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: rgba(230, 230, 236, 0.386) 0px 4px 16px, rgba(175, 183, 28, 0.348) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.message.show {
+    display: flex;
+}
+
+.restartBtn {
+    padding: 0.5rem 1rem;
+    background-color: var(--golden);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.restartBtn:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+
+
+.cell.x,
+.cell.circle {
+    cursor: not-allowed;
+}
+
+
+
+.cell.x:after {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    content: '\58';
+    font-size: 6rem;
+    font-family: 'Font Awesome\ 5 Free';
+    color: white;
+}
+
+.cell.circle:after {
+    content: '\f111';
+    font-size: 6rem;
+    color: var(--golden);
+    font-family: 'Font Awesome\ 5 Free';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
